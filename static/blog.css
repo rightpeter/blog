@@ -1,5 +1,5 @@
 /*
- * Copyright 2009 Bret Taylor
+ * Copyright 2009 Facebook
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may
  * not use this file except in compliance with the License. You may obtain
@@ -17,22 +17,14 @@
 body {
   background: white;
   color: black;
-  margin: 0;
-  margin-bottom: 25px;
+  margin: 15px;
+  margin-top: 0;
 }
 
 body,
+input,
 textarea {
   font-family: Georgia, serif;
-  font-size: 12pt;
-}
-
-h1,
-h2,
-h3,
-h4,
-input {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12pt;
 }
 
@@ -46,105 +38,71 @@ td {
   padding: 0;
 }
 
-img {
-  border: 0;
-}
-
 h1,
 h2,
 h3,
 h4 {
+  font-family: "Helvetica Nue", Helvetica, Arial, sans-serif;
   margin: 0;
+}
+
+h1 {
+  font-size: 20pt;
 }
 
 pre,
 code {
   font-family: monospace;
-  color: #050;
+  color: #060;
 }
 
 pre {
-  margin: 17pt;
-  margin-right: 0;
-  padding-left: 15pt;
-  border-left: 1px solid #ddd;
-  line-height: 16pt;
-  overflow: auto;
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 1px solid silver;
+  line-height: 14pt;
 }
 
 a,
 a code {
   color: #00c;
-  text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+#body {
+  max-width: 800px;
+  margin: auto;
 }
 
 #header {
-  background: black;
-  padding: 8px;
-  padding-left: 15px;
-  padding-right: 15px;
-  line-height: 0;
+  background-color: #3b5998;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 1em;
 }
 
-#header .menu {
-  float: right;
+#header,
+#header a {
+  color: white;
 }
 
-#header .menu span {
-  margin-left: 18px;
+#header h1 a {
+  text-decoration: none;
 }
 
 #footer,
 #content {
-  margin: 25px;
-  margin-left: 35px;
-  margin-right: 35px;
-  max-width: 1024px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-#sidebar {
-  float: right;
-  line-height: 0;
-}
-
-#sidebar .section {
-  padding-bottom: 30px;
-}
-
-#sidebar .headline {
-  padding-top: 15px;
-}
-
-#sidebar .icons td {
-  padding-top: 9px;
-  padding-right: 9px;
-  line-height: 0;
-}
-
-#sidebar .icons td.last {
-  padding-right: 0;
-}
-
-#entries {
-  margin-right: 250px;
-}
-
-#content h1 {
-  font-size: 20pt;
+#footer {
+  margin-top: 3em;
 }
 
 .entry h1 a {
   color: black;
   text-decoration: none;
-}
-
-.entry h2 {
-  font-size: 15pt;
-  margin-bottom: 3pt;
 }
 
 .entry {
@@ -155,30 +113,41 @@ a:hover {
   margin-top: 3px;
 }
 
-.entry .body {
-  margin-top: 1em;
-}
-
-.entry .footer {
-  margin-top: 1em;
-}
-
-#content p,
-#content li {
-  line-height: 17pt;
-}
-
-#content p {
+.entry p {
   margin: 0;
   margin-bottom: 1em;
 }
 
-.entry #disqus_thread {
-  margin-top: 4em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+.entry .body {
+  margin-top: 1em;
+  line-height: 16pt;
 }
 
-.entry #disqus_thread p,
-.entry #disqus_thread li {
-  line-height: normal;
+.compose td {
+  vertical-align: middle;
+  padding-bottom: 5px;
+}
+
+.compose td.field {
+  padding-right: 10px;
+}
+
+.compose .title,
+.compose .submit {
+  font-family: "Helvetica Nue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.compose .title {
+  font-size: 20pt;
+}
+
+.compose .title,
+.compose .body_source {
+  width: 100%;
+}
+
+.compose .body_source {
+  height: 500px;
+  line-height: 16pt;
 }
