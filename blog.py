@@ -85,6 +85,7 @@ class HomeHandler(BaseHandler):
 
 class EntryHandler(BaseHandler):
     def get(self, slug):
+        print 'Entry'
         entry = db.Query(Entry).filter("slug =", slug).get()
         if not entry: raise tornado.web.HTTPError(404)
         self.render("entry.html", entry=entry)
